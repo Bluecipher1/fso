@@ -11,7 +11,7 @@ logo_height = "32px"
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = true
 # logo text will only show when logo is missing.
-logo_text = "Hugoplate"
+logo_text = "FSO"
 # navbar fixed to top
 navbar_fixed = true
 # theme-mode
@@ -63,13 +63,6 @@ show_image = true
 show_description = true
 show_tags = true
 show_categories = true
-
-# announcement
-# announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
-[announcement]
-enable = true
-expire_days = 7
-content = "<span class='text-center block'>♥️ Loving Hugoplate? <a class='underline' href='https://github.com/zeon-studio/hugoplate' target='_blank' rel='noopener'>Please ⭐️ on Github</a></span>"
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
