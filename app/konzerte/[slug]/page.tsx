@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Column, Heading, Media, Meta, Row, Schema, SmartLink, Text } from "@once-ui-system/core";
 import { CustomMDX } from "@/components/Mdx";
 import { getConcertPosts, formatEventDate } from "@/app/konzerte/utils";
-import { baseURL, konzerte, organization } from "@/resources";
+import { assetPath, baseURL, konzerte, organization } from "@/resources";
 
 export async function generateStaticParams() {
   const concerts = getConcertPosts();
@@ -75,7 +75,7 @@ export default async function KonzertPage({
             s={{ position: "relative", maxWidth: "s", horizontal: "center" }}
           >
             <Media
-              src={concert.metadata.image}
+              src={assetPath(concert.metadata.image)}
               alt={`Plakat – ${concert.metadata.title}`}
               aspectRatio="965/1364"
               radius="l"

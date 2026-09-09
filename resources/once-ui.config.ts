@@ -11,6 +11,14 @@ import { organization } from "./content";
 export const baseURL: string =
   process.env.NEXT_PUBLIC_SITE_URL || "https://bluecipher1.github.io/fso";
 
+// next/image doesn't auto-prepend basePath for unoptimized/static-export
+// images the way next/link does for routes (see next.config.ts), so any
+// public/ asset passed to Media/Image as a raw "/..." path needs this.
+export function assetPath(path: string): string {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return `${basePath}${path}`;
+}
+
 export const routes: RoutesConfig = {
   "/": true,
   "/konzerte": true,
