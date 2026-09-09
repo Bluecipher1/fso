@@ -45,7 +45,7 @@ export default function Home() {
 
       {routes[konzerte.path as keyof typeof routes] && (
         <Column fillWidth gap="24" marginBottom="l">
-          <Row fillWidth paddingRight="64">
+          <Row fillWidth horizontal="center">
             <Line maxWidth={48} />
           </Row>
           <Row fillWidth gap="24" marginTop="24" s={{ direction: "column" }}>
@@ -58,7 +58,7 @@ export default function Home() {
               <Posts range={[1, 1]} />
             </Row>
           </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
+          <Row fillWidth horizontal="center">
             <Line maxWidth={48} />
           </Row>
         </Column>
