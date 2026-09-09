@@ -1,0 +1,34 @@
+@use "./breakpoints.scss" as breakpoints;
+
+// The nav pill keeps its own red-background/white-text look regardless of
+// the site-wide text color (red-on-white elsewhere) — re-declaring these
+// custom properties here shadows the global values for everything inside.
+.navPill {
+  background-color: #c8102e !important;
+  --neutral-on-background-strong: #ffffff;
+  --neutral-on-background-medium: #ffffff;
+  --neutral-on-background-weak: rgba(255, 255, 255, 0.75);
+  --neutral-alpha-weak: rgba(255, 255, 255, 0.12);
+  --neutral-alpha-medium: rgba(255, 255, 255, 0.22);
+  --neutral-alpha-strong: rgba(255, 255, 255, 0.4);
+}
+
+.mask {
+  pointer-events: none;
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(to bottom, var(--page-background), var(--static-transparent));
+  mask-image: linear-gradient(rgba(0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
+  mask-size: 100% 100%;
+}
+
+@media (max-width: breakpoints.$s) {
+  .position {
+    top: auto;
+    bottom: var(--static-space-24);
+  }
+
+  .mask {
+    transform: rotate(180deg);
+    bottom: 0;
+  }
+}

@@ -1,3 +1,22 @@
+node_modules/next/dist/docs/
+
+## Stack
+- Next.js 16 with App Router (TypeScript)
+- this web app only uses Static Site Generation
+
+## File Conventions
+- Server Components by default. Add "use client" only when you need browser APIs or interactivity.
+- Route handlers go in app/api/[route]/route.ts
+- Database queries run in lib/db.ts, never inline in components
+- 
+## Commands
+- Dev server: npm run dev
+- Type check: npx tsc --noEmit
+- Build: npm run build
+- 
+## Proxy
+- Middleware logic lives in proxy.ts, not middleware.ts (Next.js 16)
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know

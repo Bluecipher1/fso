@@ -1,0 +1,26 @@
+/*
+  Redesign note: white page background with red body text (Once UI's light
+  theme, with the neutral scale's text/border/surface tokens shifted to red
+  tones). The header nav pill keeps its own red-background/white-text look
+  regardless of this — see the scoped override in Header.module.scss.
+*/
+:root[data-theme="light"] {
+  --neutral-on-background-strong: #c8102e; /* primary text — our exact brand red */
+  --neutral-on-background-medium: #a13347;
+  --neutral-on-background-weak: #b85566;
+
+  --neutral-solid-strong: #7c0d22;
+  --neutral-solid-medium: #9c0e26;
+  --neutral-solid-weak: #c8102e;
+
+  --neutral-background-medium: #fdf1f2; /* cards, elevated surfaces */
+  --neutral-background-strong: #fae3e6;
+
+  --neutral-border-weak: #f3d7db;
+  --neutral-border-medium: #e8b9c0;
+  --neutral-border-strong: #d99aa4;
+
+  --neutral-alpha-weak: rgba(200, 16, 46, 0.08);
+  --neutral-alpha-medium: rgba(200, 16, 46, 0.16);
+  --neutral-alpha-strong: rgba(200, 16, 46, 0.32);
+}
