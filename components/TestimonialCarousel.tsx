@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Column, Text } from "@once-ui-system/core";
+import { Column, Row, Text } from "@once-ui-system/core";
 
 export type Stimme = {
   text: string;
@@ -36,26 +36,35 @@ export default function TestimonialCarousel({ items }: { items: Stimme[] }) {
   const current = items[index];
 
   return (
-    <Column
-      fillWidth
-      minHeight={20}
-      horizontal="center"
-      vertical="center"
-      paddingLeft="16"
-      border="brand-alpha-medium"
-      style={{
-        borderLeftWidth: "3px",
-        opacity: visible ? 1 : 0,
-        transition: `opacity ${FADE_MS}ms ease-in-out`,
-      }}
-      gap="4"
-    >
-      <Text variant="body-default-m" align="center" style={{ fontStyle: "italic" }}>
-        {current.text}
-      </Text>
-      <Text variant="label-default-s" onBackground="neutral-weak" align="center">
-        – {current.name}
-      </Text>
-    </Column>
+    <Row fillWidth horizontal="center">
+      <Column
+        maxWidth={22}
+        minHeight={14}
+        horizontal="center"
+        vertical="center"
+        radius="l"
+        shadow="m"
+        padding="24"
+        gap="8"
+        style={{
+          // Same faded red as the selected nav-pill entry (white 22% over
+          // the brand red #c8102e — see .navPill in Header.module.scss).
+          backgroundColor: "#d4455c",
+          opacity: visible ? 1 : 0,
+          transition: `opacity ${FADE_MS}ms ease-in-out`,
+        }}
+      >
+        <Text
+          variant="body-default-m"
+          align="center"
+          style={{ fontStyle: "italic", color: "#ffffff" }}
+        >
+          {current.text}
+        </Text>
+        <Text variant="label-default-s" align="center" style={{ color: "rgba(255,255,255,0.8)" }}>
+          – {current.name}
+        </Text>
+      </Column>
+    </Row>
   );
 }
