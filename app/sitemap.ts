@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getConcertPosts } from "@/app/konzerte/utils";
 import { baseURL, routes } from "@/resources";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const concerts = getConcertPosts().map((post) => ({
     url: `${baseURL}/konzerte/${post.slug}`,

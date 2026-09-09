@@ -9,7 +9,7 @@ import {
 import { organization } from "./content";
 
 export const baseURL: string =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://freies-sinfonieorchester.example.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://bluecipher1.github.io/fso";
 
 export const routes: RoutesConfig = {
   "/": true,
