@@ -8,7 +8,7 @@ export type Stimme = {
   name: string;
 };
 
-const HOLD_MS = 10000;
+const HOLD_MS = 6000;
 const FADE_MS = 1000;
 
 export default function TestimonialCarousel({ items }: { items: Stimme[] }) {
