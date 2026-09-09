@@ -40,12 +40,7 @@ export default function LeitungPage() {
           Konzertmeisterin
         </Text>
 
-        <Column
-          paddingLeft="16"
-          border="brand-alpha-medium"
-          style={{ borderLeftWidth: "3px" }}
-          gap="4"
-        >
+        <Column background="surface" border="neutral-alpha-weak" radius="l" padding="24" gap="4">
           <Text variant="body-default-m" style={{ fontStyle: "italic" }}>
             „Für mich ist jede Probe mit dem Freien Sinfonieorchester
             spannend: Tolle Dinge passieren, die ich nicht immer erwarte. Es
@@ -80,12 +75,7 @@ export default function LeitungPage() {
           Sinfonieorchester.
         </Text>
 
-        <Column
-          paddingLeft="16"
-          border="brand-alpha-medium"
-          style={{ borderLeftWidth: "3px" }}
-          gap="4"
-        >
+        <Column background="surface" border="neutral-alpha-weak" radius="l" padding="24" gap="4">
           <Text variant="body-default-m" style={{ fontStyle: "italic" }}>
             „Wir sind sehr froh, dass Julia Pérez Gámez unsere
             Konzertmeisterin ist. Julia ist eine erfahrene professionelle

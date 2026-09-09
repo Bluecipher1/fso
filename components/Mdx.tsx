@@ -126,10 +126,11 @@ function createHR() {
 function createBlockquote({ children }: { children: ReactNode }) {
   return (
     <Column
-      paddingLeft="16"
+      background="surface"
+      border="neutral-alpha-weak"
+      radius="l"
+      padding="24"
       marginY="16"
-      border="brand-alpha-medium"
-      style={{ borderLeftWidth: "3px" }}
       gap="4"
     >
       <Text
